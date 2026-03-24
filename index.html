@@ -6,33 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>AttendlyPro</title>
 
-    <link rel="manifest" href="/manifest.json" />
-    <meta name="theme-color" content="#2563eb" />
-    <meta name="description" content="Professional Attendance Management System" />
+    <link rel="manifest" href="https://progressier.app/5bCYxBMEKeRCDgW5XI2T/progressier.json"/>
+    <script defer src="https://progressier.app/5bCYxBMEKeRCDgW5XI2T/script.js"></script>
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="AttendlyPro">
-    <link rel="apple-touch-icon" href="/icon-192.png">
 
     <style>
       input, select, textarea { font-size: 16px !important; }
+      body { 
+        overscroll-behavior-y: contain; /* Prevents "pull-to-refresh" in the app */
+        -webkit-tap-highlight-color: transparent; 
+      }
     </style>
   </head>
   
-  <body class="overscroll-none">
+  <body class="bg-slate-50">
     <div id="root"></div>
     
     <script type="module" src="/src/main.jsx"></script>
-
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
-            .then(reg => console.log('Service Worker Registered!', reg))
-            .catch(err => console.error('Service Worker Failed!', err));
-        });
-      }
-    </script>
   </body>
 </html>
